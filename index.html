@@ -7,87 +7,217 @@
 
 <style>
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f8f4ec;
-    text-align:center;
-    color:#234032;
+margin:0;
+font-family:Arial,sans-serif;
+background:#f8f4ec;
+color:#1f3d35;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 8%;
+background:#f8f4ec;
+}
+
+nav img{
+width:150px;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#1f3d35;
+font-weight:bold;
 }
 
 .hero{
-    padding:60px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:70px 8%;
+gap:40px;
 }
 
-.logo{
-    width:350px;
-    max-width:90%;
-    margin-bottom:20px;
+.hero-text{
+max-width:550px;
 }
 
-.slogan{
-    font-size:24px;
-    margin-bottom:30px;
+.hero h1{
+font-size:56px;
+line-height:1.05;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:21px;
+line-height:1.6;
 }
 
 .button{
-    background:#2f6b45;
-    color:white;
-    padding:15px 30px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
+display:inline-block;
+margin-top:25px;
+background:#1f5b45;
+color:white;
+padding:16px 32px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
 }
 
-.section{
-    background:white;
-    max-width:900px;
-    margin:30px auto;
-    padding:40px;
-    border-radius:20px;
+.card{
+background:white;
+padding:45px;
+border-radius:30px;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
 }
 
-h2{
-    color:#2f6b45;
+.logo-big{
+width:360px;
+max-width:100%;
+}
+
+.sections{
+padding:40px 8%;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.section h2{
+color:#1f5b45;
+}
+
+.about{
+padding:70px 8%;
+text-align:center;
+}
+
+.about h2{
+font-size:38px;
+}
+
+.about p{
+max-width:800px;
+margin:auto;
+font-size:19px;
+line-height:1.7;
+}
+
+.waitlist{
+background:#1f5b45;
+color:white;
+padding:70px 8%;
+text-align:center;
+}
+
+.waitlist h2{
+font-size:38px;
+}
+
+.waitlist input{
+padding:16px;
+width:280px;
+max-width:80%;
+border:none;
+border-radius:30px;
+margin:10px;
+}
+
+.waitlist button{
+padding:16px 30px;
+border:none;
+border-radius:30px;
+background:#d6a629;
+color:white;
+font-weight:bold;
+}
+
+footer{
+padding:35px;
+text-align:center;
+font-size:14px;
+background:#efe6d8;
+}
+
+@media(max-width:800px){
+.hero{
+flex-direction:column;
+text-align:center;
+}
+.sections{
+grid-template-columns:1fr;
+}
+.hero h1{
+font-size:40px;
+}
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
-
-<img src="tokobinti logo.png" class="logo">
-
-<p class="slogan">
-Heel je binnenwereld, straal van buiten.
-</p>
-
-<a href="#" class="button">
-Binnenkort verkrijgbaar
-</a>
-
+<nav>
+<img src="tokobinti logo.png" alt="Toko Binti logo">
+<div>
+<a href="#over">Over</a>
+<a href="#formule">Formule</a>
+<a href="#contact">Contact</a>
 </div>
+</nav>
 
-<div class="section">
-<h2>Voor huid, buik en balans</h2>
+<section class="hero">
+<div class="hero-text">
+<h1>Heel je binnenwereld,<br>straal van buiten.</h1>
 <p>
-Een holistisch wellnessmerk voor vrouwen die van binnenuit willen stralen.
+Toko Binti is een holistisch wellnessmerk voor vrouwen die hun huid, buik en balans van binnenuit willen ondersteunen.
 </p>
+<a href="#wachtlijst" class="button">Schrijf je in voor de wachtlijst</a>
 </div>
 
-<div class="section">
-<h2>Onze eerste formule</h2>
-<p>
-Een premium probioticum ontwikkeld met focus op huid, darmgezondheid en vrouwelijke balans.
-</p>
+<div class="card">
+<img src="tokobinti logo.png" class="logo-big" alt="Toko Binti">
+</div>
+</section>
+
+<section class="sections" id="formule">
+<div class="card section">
+<h2>Huid</h2>
+<p>Ondersteuning van binnenuit voor een rustige, stralende huid.</p>
 </div>
 
-<div class="section">
-<h2>Contact</h2>
-<p>
-infotokobinti@gmail.com
-</p>
+<div class="card section">
+<h2>Darmen</h2>
+<p>Focus op darmgezondheid als basis voor balans en welzijn.</p>
 </div>
+
+<div class="card section">
+<h2>Vrouwelijke balans</h2>
+<p>Ontwikkeld met aandacht voor de behoeften van vrouwen.</p>
+</div>
+</section>
+
+<section class="about" id="over">
+<h2>Over Toko Binti</h2>
+<p>
+Toko Binti staat voor zachte kracht, innerlijke heling en natuurlijke schoonheid.
+Ons eerste product wordt een premium probioticum met focus op huid, darmgezondheid en vrouwelijke balans.
+</p>
+</section>
+
+<section class="waitlist" id="wachtlijst">
+<h2>Binnenkort verkrijgbaar</h2>
+<p>Wil je als eerste weten wanneer Toko Binti live gaat?</p>
+
+<input type="email" placeholder="Jouw e-mailadres">
+<button>Ik wil op de wachtlijst</button>
+</section>
+
+<footer id="contact">
+<p>Contact: infotokobinti@gmail.com</p>
+<p>© 2026 Toko Binti</p>
+</footer>
 
 </body>
 </html>
